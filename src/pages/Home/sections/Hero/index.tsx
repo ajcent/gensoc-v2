@@ -18,7 +18,7 @@ const slideUp: Variants = {
 
 const Hero = () => {
   return (
-    <section className="overflow-hidden relative">
+    <section className="relative overflow-hidden">
       <Padded className="text-center lg:h-[30rem] flex  flex-col justify-center items-center">
         <p className="relative z-10">{hero.contents[0]}</p>
         <blockquote className="my-6">
@@ -27,7 +27,7 @@ const Hero = () => {
             initial="initial"
             animate="animate"
             custom={1}
-            className="italic text-[clamp(2rem,4vw,3rem)] relative"
+            className="italic text-[clamp(2rem,4vw,3rem)] font-semibold relative"
           >
             <AnimatedBackground />
             <span className="relative">{hero.quote}</span>

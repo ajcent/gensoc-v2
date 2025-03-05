@@ -9,8 +9,8 @@ const TestimonialCard = (props: TestimonialCardProps) => {
   const { quote, author, occupation, imageLink } = props;
 
   return (
-    <article className="flex-1 flex items-end">
-      <div className="flex flex-col gap-2 w-full">
+    <article className="flex-1 flex bg-charcoal-95 p-4 rounded shadow-xl">
+      <div className="flex flex-col gap-2 w-full justify-between h-full">
         <blockquote>
           <p className="leading-loose">{quote}</p>
         </blockquote>

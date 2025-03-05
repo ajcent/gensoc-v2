@@ -17,6 +17,7 @@ export default {
         // Custom
         charcoal: "hsl(0, 0%, 6%)",
         "charcoal-30": "hsl(0, 0%, 30%)",
+        "charcoal-95": "hsl(0, 0%, 95%)",
 
         cloud: "hsl(0, 0%, 98%)",
         "cloud-70": "hsl(0, 0%, 70%)",

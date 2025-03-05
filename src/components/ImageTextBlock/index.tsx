@@ -44,7 +44,7 @@ const ImageTextBlock = (props: ImageTextBlockProps) => {
   return (
     <article
       className={cn(
-        "flex lg:h-[30rem] flex-col-reverse",
+        "flex lg:h-[30rem] flex-col",
         scheme.bg,
         `${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`
       )}
