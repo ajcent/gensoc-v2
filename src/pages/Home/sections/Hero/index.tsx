@@ -18,7 +18,7 @@ const slideUp: Variants = {
 
 const Hero = () => {
   return (
-    <section>
+    <section className="overflow-hidden relative">
       <Padded className="text-center lg:h-[30rem] flex  flex-col justify-center items-center">
         <p className="relative z-10">{hero.contents[0]}</p>
         <blockquote className="my-6">
