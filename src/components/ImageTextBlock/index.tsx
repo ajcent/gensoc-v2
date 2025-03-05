@@ -58,7 +58,7 @@ const ImageTextBlock = (props: ImageTextBlockProps) => {
 
         <motion.div whileHover="hover" className="w-fit" role="button">
           <Link
-            to="/"
+            to={to}
             className={cn(
               "uppercase font-semibold relative w-fit",
               scheme.textPrimary

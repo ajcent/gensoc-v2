@@ -1,4 +1,3 @@
-import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 type TestimonialCardProps = Record<
