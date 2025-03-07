@@ -48,8 +48,8 @@ const InViewSlide = (props: InViewSlideProps) => {
       className="inline-block"
       custom={{ delay, direction, distance }}
       variants={inViewSlideVariant}
-      // initial="initial"
-      // whileInView="animate"
+      initial="initial"
+      whileInView="animate"
       viewport={{ once: true, amount: threshold }}
     >
       {children}
