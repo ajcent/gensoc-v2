@@ -6,7 +6,7 @@ import testimonials from "./_constants";
 const Testimonials = () => {
   return (
     <section>
-      <Padded>
+      <Padded className="pt-20">
         <div className="pb-12">
           <h2 className="text-3xl uppercase font-bold pb-2">Testimonials</h2>
           <p className="text-charcoal-30">

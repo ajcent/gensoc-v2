@@ -9,7 +9,7 @@ import hero from "./_constants";
 
 const Hero = () => {
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden relative">
       <Padded className="text-center lg:h-[30rem] flex  flex-col justify-center items-center">
         <InViewSlide delay={3}>
           <p>{hero.contents[0]}</p>
