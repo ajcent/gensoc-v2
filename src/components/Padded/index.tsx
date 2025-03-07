@@ -13,7 +13,7 @@ const defaultExclude = {
 type Positions = keyof typeof defaultExclude;
 type Excluded = Record<Positions, boolean>;
 
-interface PaddedProps extends React.ComponentPropsWithoutRef<"section"> {
+interface PaddedProps extends React.ComponentPropsWithoutRef<"div"> {
   exclude?: Partial<Excluded>;
 }
 

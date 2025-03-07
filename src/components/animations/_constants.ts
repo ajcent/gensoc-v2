@@ -1,7 +1,7 @@
 const animationConfig = {
-  delayScalar: 0.3,
+  delayScalar: 0.2,
   baseDistance: 20,
-  baseThreshold: 0.5,
+  baseThreshold: 1,
   baseDir: "down",
 } as const;
 

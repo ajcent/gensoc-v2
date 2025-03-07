@@ -15,12 +15,14 @@ export default {
       },
       colors: {
         // Custom
-        charcoal: "hsl(0, 0%, 6%)",
-        "charcoal-30": "hsl(0, 0%, 30%)",
-        "charcoal-95": "hsl(0, 0%, 95%)",
+        "charcoal-main": "hsl(0, 0%, 6%)",
+        "charcoal-secondary": "hsl(0, 0%, 40%)",
+        "charcoal-light": "hsl(0, 0%, 85%)",
 
-        cloud: "hsl(0, 0%, 98%)",
-        "cloud-70": "hsl(0, 0%, 70%)",
+        "cloud-main": "hsl(0, 0%, 98%)",
+        "cloud-secondary": "hsl(0, 0%, 80%)",
+        "cloud-light": "hsl(0, 0%, 30%)",
+
         // Custom
 
         background: "hsl(var(--background))",

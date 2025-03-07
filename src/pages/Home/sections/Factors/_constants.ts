@@ -1,7 +1,6 @@
-import { ArticleDTO } from "@/components/ImageTextBlock";
 import routes from "@/constants/routes";
 
-export const articles: ArticleDTO[] = [
+export const articles = [
   {
     heading: "Education",
     content:

@@ -4,85 +4,48 @@ import { Link } from "react-router-dom";
 import Padded from "@/components/Padded";
 import Image from "@/components/Image";
 import { Separator } from "@/components/ui/separator";
-import { cn } from "@/lib/utils";
 
-type ColorScheme = "light" | "dark";
-
-export interface ArticleDTO {
+interface ImageTextBlockProps {
   heading: string;
   content: string;
   imgLink: string;
   to: string;
 }
 
-interface ImageTextBlockProps {
-  colorScheme?: ColorScheme;
-  reverse?: boolean;
-  data: ArticleDTO;
-}
-
-const colorSchemeClasses = {
-  light: {
-    bg: "bg-cloud",
-    bgSecondary: "bg-charcoal",
-    textPrimary: "text-charcoal",
-    textSecondary: "text-charcoal-30",
-  },
-  dark: {
-    bg: "bg-charcoal",
-    bgSecondary: "bg-cloud",
-    textPrimary: "text-cloud",
-    textSecondary: "text-cloud-70",
-  },
-};
-
 const ImageTextBlock = (props: ImageTextBlockProps) => {
-  const { colorScheme = "light", reverse = false, data } = props;
-  const { heading, content, imgLink, to } = data;
-  const scheme = colorSchemeClasses[colorScheme];
+  const { heading, content, imgLink, to } = props;
 
   return (
-    <article
-      className={cn(
-        "flex lg:h-[30rem] flex-col",
-        scheme.bg,
-        `${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`
-      )}
-    >
-      <Padded className="flex-[2] flex flex-col gap-8 h-full justify-center">
-        <h3 className={cn("font-semibold text-3xl", scheme.textPrimary)}>
+    <article className="group flex flex-col lg:flex-row even:lg:flex-row-reverse lg:h-[30rem] bg-cloud-main odd:bg-charcoal-main">
+      <Padded className="flex flex-col gap-6 flex-[2] justify-center h-full">
+        <h3 className="text-3xl font-semibold uppercase leading-none group-odd:text-cloud-main text-charcoal-main">
           {heading}
         </h3>
-        <p className={cn(scheme.textSecondary, "leading-loose")}>{content}</p>
-        <Separator />
+        <p className="leading-loose group-odd:text-cloud-secondary text-charcoal-secondary">
+          {content}
+        </p>
 
-        <motion.div whileHover="hover" className="w-fit" role="button">
+        <Separator className="group-even:bg-charcoal-light bg-cloud-light" />
+
+        <motion.div whileHover="hover" className="w-fit" role="link">
           <Link
             to={to}
-            className={cn(
-              "uppercase font-semibold relative w-fit",
-              scheme.textPrimary
-            )}
+            className="relative font-semibold uppercase w-fit group-odd:text-cloud-main text-charcoal-main"
           >
             Read more
             <motion.span
-              initial={{
-                width: 0,
-              }}
+              initial={{ width: 0 }}
               variants={{ hover: { width: "100%" } }}
-              transition={{ duration: 1 / 4 }}
-              className={cn(
-                "absolute h-[2px] -bottom-2 left-0",
-                scheme.bgSecondary
-              )}
+              transition={{ duration: 0.25 }}
+              className="absolute left-0 -bottom-2 h-[2px] bg-green-400"
             />
           </Link>
         </motion.div>
       </Padded>
 
-      <div className="lg:flex-[3] lg:h-full h-52 sm:h-96 bg-blue-300">
-        <Image className="" src={imgLink} alt={heading} />
-      </div>
+      <figure className="h-52 sm:h-96 lg:h-full lg:flex-[3] bg-gray-400">
+        <Image src={imgLink} alt={heading} />
+      </figure>
     </article>
   );
 };

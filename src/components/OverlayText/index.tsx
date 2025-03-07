@@ -11,8 +11,8 @@ const OverlayText = ({ textComponent, bgComponent }: OverlayTextProps) => {
         className="
           absolute inset-0 z-[2] 
           grid place-items-center 
-          bg-black/70 
-          text-white text-center text-[clamp(1rem,2vw+0.5rem,2rem)] font-semibold leading-relaxed 
+          bg-black/60
+          text-cloud-main text-center text-[clamp(1rem,2vw+0.5rem,2rem)] font-semibold leading-relaxed 
           p-8 sm:p-16 lg:p-40
         "
       >

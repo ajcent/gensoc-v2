@@ -10,19 +10,19 @@ import hero from "./_constants";
 const Hero = () => {
   return (
     <section className="overflow-hidden relative">
-      <Padded className="text-center lg:h-[30rem] flex  flex-col justify-center items-center">
-        <InViewSlide delay={3}>
-          <p>{hero.contents[0]}</p>
+      <Padded className="text-center h-[30rem] flex  flex-col justify-center items-center">
+        <InViewSlide delay={2}>
+          <p className="text-charcoal-main">{hero.contents[0]}</p>
         </InViewSlide>
         <blockquote className="my-6">
           <p className="italic text-[clamp(2rem,4vw,3rem)] font-semibold">
             <AnimatedBackground />
-            <InViewSlide delay={1} direction="up">
-              <span>{hero.quote}</span>
+            <InViewSlide direction="up">
+              <span className="text-charcoal-main">{hero.quote}</span>
             </InViewSlide>
           </p>
-          <InViewSlide delay={2} direction="up">
-            <strong className="uppercase text-charcoal-30">
+          <InViewSlide delay={1} direction="up">
+            <strong className="uppercase text-charcoal-secondary">
               - {hero.author} -
             </strong>
           </InViewSlide>

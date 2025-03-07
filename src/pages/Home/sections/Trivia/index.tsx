@@ -1,5 +1,6 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import InViewSlide from "@/components/animations/InViewSlide";
 import {
   Carousel,
   CarouselContent,
@@ -20,10 +21,17 @@ export function Trivia() {
       <Carousel setApi={setApi} opts={{ loop: true }} className="relative">
         <CarouselContent className="h-[25rem] lg:h-[33rem]">
           {slides.map((slide, idx) => (
-            <CarouselItem key={`${slide.content}-${idx}`}>
+            <CarouselItem
+              key={`${slide.content}-${idx}`}
+              className="cursor-ew-resize select-none"
+            >
               <OverlayText
                 bgComponent={<Image src={slide.imgLink} />}
-                textComponent={slide.content}
+                textComponent={
+                  <InViewSlide direction="up">
+                    <p>{slide.content}</p>
+                  </InViewSlide>
+                }
               />
             </CarouselItem>
           ))}
@@ -31,7 +39,7 @@ export function Trivia() {
 
         <>
           <FloatingButton
-            className="top-0 left-0 text-cloud-70"
+            className="top-0 left-0 text-cloud-main"
             onClick={() => api?.scrollPrev()}
           >
             <ChevronLeft size={25} />
