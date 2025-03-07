@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import routes from "@/constants/routes";
 import Padded from "@/components/Padded";
 import AnimatedButton from "@/components/AnimatedButton";
-import InViewSlide from "@/components/animations/InViewSlide";
 
 const TopNavigation = () => {
   return (
