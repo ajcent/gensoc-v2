@@ -35,6 +35,7 @@ const inViewSlideVariant: Variants = {
     translateY: 0,
     transition: {
       delay: animationConfig.delayScalar * (custom.delay + 1),
+      duration: 0.3,
     },
   }),
 };

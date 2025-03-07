@@ -17,7 +17,7 @@ const Facts = () => {
           </p>
         </Padded>
         <figure className="flex flex-1 h-full items-end justify-center">
-          <InViewSlide direction="up" threshold={0.6}>
+          <InViewSlide direction="down" threshold={0.9}>
             <Image
               src={section.imageLink}
               className="h-96 lg:h-[22rem] xl:h-[30rem] object-contain"

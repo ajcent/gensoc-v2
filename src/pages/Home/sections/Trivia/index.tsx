@@ -1,4 +1,6 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 import InViewSlide from "@/components/animations/InViewSlide";
 import {
@@ -15,10 +17,18 @@ import useCarouselApi from "./_hooks/useCarouselApi";
 
 export function Trivia() {
   const [api, setApi] = useCarouselApi();
+  const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
 
   return (
     <section>
-      <Carousel setApi={setApi} opts={{ loop: true }} className="relative">
+      <Carousel
+        plugins={[plugin.current]}
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={() => plugin.current.play()}
+        setApi={setApi}
+        opts={{ loop: true }}
+        className="relative"
+      >
         <CarouselContent className="h-[25rem] lg:h-[33rem]">
           {slides.map((slide, idx) => (
             <CarouselItem
@@ -45,7 +55,7 @@ export function Trivia() {
             <ChevronLeft size={25} />
           </FloatingButton>
           <FloatingButton
-            className="top-0 right-0 text-cloud-70"
+            className="top-0 right-0 text-cloud-main"
             onClick={() => api?.scrollNext()}
           >
             <ChevronRight size={25} />

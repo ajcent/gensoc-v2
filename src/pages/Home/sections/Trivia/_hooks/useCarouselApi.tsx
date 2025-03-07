@@ -4,21 +4,22 @@ import { type CarouselApi } from "@/components/ui/carousel";
 
 const useCarouselApi = () => {
   const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
+  // const [current, setCurrent] = useState(0);
+  // const [count, setCount] = useState(0);
 
-  console.log(current);
-  console.log(count);
+  // console.log(current);
+  // console.log(count);
 
   useEffect(() => {
     if (!api) return;
 
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
+    // setCount(api.scrollSnapList().length);
+    // setCurrent(api.selectedScrollSnap() + 1);
 
     api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
+      // setCurrent(api.selectedScrollSnap() + 1);
     });
+    // All the comment above may be useful
     // api?.scrollTo(2); //I can control which slide to show with this
   }, [api]);
 
