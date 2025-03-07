@@ -1,15 +1,21 @@
 interface OverlayTextProps {
-  textComponent: React.ReactNode;
+  textComponent: React.ReactNode | string;
   bgComponent: React.ReactNode;
 }
 
-const OverlayText = (props: OverlayTextProps) => {
-  const { textComponent, bgComponent } = props;
-
+const OverlayText = ({ textComponent, bgComponent }: OverlayTextProps) => {
   return (
-    <figure className="h-full relative">
+    <figure className="relative h-full">
       {bgComponent}
-      <figcaption className="absolute z-[2] inset-0 bg-black/70 grid place-items-center">
+      <figcaption
+        className="
+          absolute inset-0 z-[2] 
+          grid place-items-center 
+          bg-black/70 
+          text-white text-center text-[clamp(1rem,2vw+0.5rem,2rem)] font-semibold leading-relaxed 
+          p-8 sm:p-16 lg:p-40
+        "
+      >
         {textComponent}
       </figcaption>
     </figure>
