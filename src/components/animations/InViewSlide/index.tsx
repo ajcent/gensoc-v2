@@ -57,7 +57,7 @@ const InViewSlide = (props: InViewSlideProps) => {
       variants={inViewSlideVariant}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, amount: threshold }}
+      viewport={{ once: false, amount: threshold }}
     >
       {children}
     </motion.span>

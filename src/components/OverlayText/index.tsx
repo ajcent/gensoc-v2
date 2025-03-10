@@ -8,6 +8,7 @@ const OverlayText = ({ textComponent, bgComponent }: OverlayTextProps) => {
     <figure className="relative h-full">
       {bgComponent}
       <figcaption
+        role="presentation"
         className="
           absolute inset-0 z-[2] 
           grid place-items-center 
