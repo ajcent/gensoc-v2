@@ -24,7 +24,7 @@ const useAnimationSequence = (
   const [scope, animate] = useAnimate();
   const isInView = useInView(
     scope,
-    inViewOptions ?? { once: true, amount: 0.8 }
+    inViewOptions ?? { once: true, amount: 0.5 }
   );
 
   useEffect(() => {

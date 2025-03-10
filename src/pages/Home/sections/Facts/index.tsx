@@ -10,7 +10,7 @@ const Facts = () => {
   const scope = useAnimationSequence(animation);
 
   return (
-    <section ref={scope} className="relative">
+    <section ref={scope} className="relative overflow-hidden">
       <AnimatedBackground />
 
       <article className="flex flex-col lg:flex-row items-center lg:h-[30rem] xl:h-[35rem]">
